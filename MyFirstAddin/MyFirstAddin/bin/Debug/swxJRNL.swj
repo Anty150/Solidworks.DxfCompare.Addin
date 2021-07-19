@@ -1,0 +1,16 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 07/16/21 by Anty
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+' MSGBOX
+' Hello!
+

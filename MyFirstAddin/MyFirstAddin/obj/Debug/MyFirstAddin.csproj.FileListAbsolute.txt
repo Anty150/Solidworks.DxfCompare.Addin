@@ -1,0 +1,16 @@
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.dll
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.pdb
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csprojAssemblyReference.cache
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.CoreCompileInputs.cache
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.dll
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.pdb
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.TaskpaneHostUI.resources
+C:\Users\igor2\source\repos\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.GenerateResource.cache
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.dll
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.pdb
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.AssemblyReference.cache
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.TaskpaneHostUI.resources
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.GenerateResource.cache
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.CoreCompileInputs.cache
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.dll
+C:\Users\01-WRO\Desktop\Temp\MyFirstAddin-20210719T070314Z-001\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.pdb
