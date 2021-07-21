@@ -4,10 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using SolidWorks.Interop.sldworks;
-using Microsoft.VisualBasic;
-using SolidWorks.Interop.swconst;
-using System.Linq;
 
 namespace MyFirstAddin
 {
@@ -29,7 +25,7 @@ namespace MyFirstAddin
         private void selectPath_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-            fbd.RootFolder = System.Environment.SpecialFolder.Desktop;
+            fbd.RootFolder = Environment.SpecialFolder.Desktop;
             fbd.Description = "Select Folder";
             fbd.ShowNewFolderButton = false;
 
@@ -92,7 +88,7 @@ namespace MyFirstAddin
             }
             for (int j = 0; j < duplicatesIndex.Count; j++)
             {
-                //label1.Text += fileNames[duplicatesIndex[j]] + "\n"; #For debugging
+                //label1.Text += fileNames[duplicatesIndex[j]] + "\n"; #Debug
             }
 
 
@@ -119,26 +115,13 @@ namespace MyFirstAddin
             File.Copy(dir, Path.ChangeExtension(dir, ".txt"));
 
             string directory1 = Path.ChangeExtension(dir, ".txt");
-            //label1.Text = directory1; #For debugging
+            //label1.Text = directory1; #Debug
 
             //For dir2
             File.Copy(dir2, Path.ChangeExtension(dir2, ".txt"));
 
             string directory2 = Path.ChangeExtension(dir2, ".txt");
-            //label1.Text = directory2; #For debugging
-
-            /*if (File.ReadLines(directory1).SequenceEqual(File.ReadLines(directory2)))
-            {
-                File.Delete(directory1);
-                File.Delete(directory2);
-                return true;
-            }
-            else
-            {
-                File.Delete(directory1);
-                File.Delete(directory2);
-                return false;
-            }*/
+            //label1.Text = directory2; #Debug           
 
             //Read file1
             StreamReader reader;

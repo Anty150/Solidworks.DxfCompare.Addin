@@ -3,7 +3,6 @@ using SolidWorks.Interop.swpublished;
 using SolidWorks.Interop.sldworks;
 using System.Runtime.InteropServices;
 using System.IO;
-using SolidWorks.Interop.swconst;
 
 namespace MyFirstAddin
 {
@@ -21,7 +20,7 @@ namespace MyFirstAddin
         {
             App = (SldWorks)ThisSW;
             mSolidWorksApplication = (SldWorks)ThisSW;
-            App.SendMsgToUser("Hello!");
+            //App.SendMsgToUser("Hello!"); #Debug
             mSwCookie = cookie;
 
             var ok = mSolidWorksApplication.SetAddinCallbackInfo2(0, this, mSwCookie);
@@ -32,7 +31,7 @@ namespace MyFirstAddin
 
         public bool DisconnectFromSW()
         {
-            App.SendMsgToUser("Goodbye!");
+            //App.SendMsgToUser("Goodbye!"); #Debug
             UnloadUI();
             Marshal.ReleaseComObject(App);
             GC.Collect();
@@ -46,37 +45,15 @@ namespace MyFirstAddin
         {
             var imagePath = Path.Combine(Path.GetDirectoryName(typeof(Main).Assembly.CodeBase).Replace(@"file:\", string.Empty), "Webp.net-resizeimage.bmp");
             
-            mTaskpaneView = mSolidWorksApplication.CreateTaskpaneView2(imagePath, "Addin used to compare dxf files");
-
+            mTaskpaneView = mSolidWorksApplication.CreateTaskpaneView2(imagePath, "dxfCompare");
             mTaskpaneHost = (TaskpaneHostUI)mTaskpaneView.AddControl(Main.SWTASKPANE_PROGID, string.Empty);
         }
         private void UnloadUI()
-        {
-            //mTaskpaneHost = null;
-
+        {            
             mTaskpaneView.DeleteView();
-            Marshal.ReleaseComObject(mTaskpaneView);
-
-            //mTaskpaneView = null;
+            Marshal.ReleaseComObject(mTaskpaneView);            
         }
-
-        static internal void ImportFile(string filePath)
-        {
-            ModelDoc2 model = default(ModelDoc2);
-            string fileName = filePath;
-            string argString = null;
-            int Err = 0;
-            ImportDxfDwgData importData = default(ImportDxfDwgData);
-            importData = App.GetImportFileData(fileName);
-            importData.set_ImportMethod("", (int)swImportDxfDwg_ImportMethod_e.swImportDxfDwg_ImportToPartSketch);
-            model = (ModelDoc2)App.LoadFile4(fileName, argString, importData, ref Err);
-            
-            //Measuring the lenght of lines in a sketch
-
-
-
-        }
-
+     
         [ComRegisterFunction()]
         private static void RegisterFunction(Type t)
         {
@@ -85,8 +62,8 @@ namespace MyFirstAddin
             string keyname = "SOFTWARE\\SolidWorks\\Addins\\{" + t.GUID.ToString() + "}";
             Microsoft.Win32.RegistryKey addinkey = hklm.CreateSubKey(keyname);
             addinkey.SetValue(null, 1);
-            addinkey.SetValue("Description", "This is my first addin");
-            addinkey.SetValue("Title", "MyFirstAddin");
+            addinkey.SetValue("Description", "Addin used to find duplicated dxf files");
+            addinkey.SetValue("Title", "dxfCompare");
             keyname = "Software\\SolidWorks\\AddInsStartup\\{" + t.GUID.ToString() + "}";
             addinkey = hkcu.CreateSubKey(keyname);
             addinkey.SetValue(null, 1);
