@@ -7,6 +7,7 @@ using System.IO;
 using SolidWorks.Interop.sldworks;
 using Microsoft.VisualBasic;
 using SolidWorks.Interop.swconst;
+using System.Linq;
 
 namespace MyFirstAddin
 {
@@ -91,12 +92,77 @@ namespace MyFirstAddin
             }
             for (int j = 0; j < duplicatesIndex.Count; j++)
             {
-                label1.Text += fileNames[duplicatesIndex[j]] + "\n";
+                //label1.Text += fileNames[duplicatesIndex[j]] + "\n"; #For debugging
             }
 
 
-            Main.ImportFile(@"C:\Users\01-WRO\Desktop\tmp\pliki\1276_OP_VP2542_20.dxf");
-            
+            //Comparing files
+            for (int j = 0; j < duplicatesIndex.Count; j++)
+            {
+                for (int k = 0; k < duplicatesIndex.Count; k++)
+                {
+                    if (j != k)
+                    {
+                        if (ReadFile(fileNames[duplicatesIndex[j]], fileNames[duplicatesIndex[k]]))
+                        {
+                            label1.Text += "\n Wykryto duplikat: \n" + fileNames[duplicatesIndex[j]] + " \n to duplikat pliku \n" + fileNames[duplicatesIndex[k]];
+                        }
+                    }
+                }
+            }            
+
+        }
+        private bool ReadFile(string dir, string dir2)
+        {
+            //For dir1
+            File.Copy(dir, Path.ChangeExtension(dir, ".txt"));
+
+            string directory1 = Path.ChangeExtension(dir, ".txt");
+            //label1.Text = directory1; #For debugging
+
+            //For dir2
+            File.Copy(dir2, Path.ChangeExtension(dir2, ".txt"));
+
+            string directory2 = Path.ChangeExtension(dir2, ".txt");
+            //label1.Text = directory2; #For debugging
+
+            /*if (File.ReadLines(directory1).SequenceEqual(File.ReadLines(directory2)))
+            {
+                File.Delete(directory1);
+                File.Delete(directory2);
+                return true;
+            }
+            else
+            {
+                File.Delete(directory1);
+                File.Delete(directory2);
+                return false;
+            }*/
+
+            //Read file1
+            StreamReader reader;
+            reader = new StreamReader(directory1);
+            string Data1 = reader.ReadToEnd();
+            reader.Close();
+
+            //Read file2
+
+            reader = new StreamReader(directory2);
+            string Data2 = reader.ReadToEnd();
+            reader.Close();
+            if (Data1 == Data2)
+            {
+                File.Delete(directory1);
+                File.Delete(directory2);
+                return true;
+            }
+            else
+            {
+                File.Delete(directory1);
+                File.Delete(directory2);
+                return false;
+            }
+
         }
 
     }

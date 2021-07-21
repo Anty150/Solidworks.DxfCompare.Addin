@@ -70,8 +70,13 @@ namespace MyFirstAddin
             importData = App.GetImportFileData(fileName);
             importData.set_ImportMethod("", (int)swImportDxfDwg_ImportMethod_e.swImportDxfDwg_ImportToPartSketch);
             model = (ModelDoc2)App.LoadFile4(fileName, argString, importData, ref Err);
+            
+            //Measuring the lenght of lines in a sketch
+
+
+
         }
-    
+
         [ComRegisterFunction()]
         private static void RegisterFunction(Type t)
         {
@@ -98,4 +103,5 @@ namespace MyFirstAddin
             hklm.DeleteSubKey(keyname);
         }
     }
+    
 }
