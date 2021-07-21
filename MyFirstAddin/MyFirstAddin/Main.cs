@@ -3,7 +3,7 @@ using SolidWorks.Interop.swpublished;
 using SolidWorks.Interop.sldworks;
 using System.Runtime.InteropServices;
 using System.IO;
-
+using SolidWorks.Interop.swconst;
 
 namespace MyFirstAddin
 {
@@ -67,6 +67,8 @@ namespace MyFirstAddin
             string argString = null;
             int Err = 0;
             ImportDxfDwgData importData = default(ImportDxfDwgData);
+            importData = App.GetImportFileData(fileName);
+            importData.set_ImportMethod("", (int)swImportDxfDwg_ImportMethod_e.swImportDxfDwg_ImportToPartSketch);
             model = (ModelDoc2)App.LoadFile4(fileName, argString, importData, ref Err);
         }
     

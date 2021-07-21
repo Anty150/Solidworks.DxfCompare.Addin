@@ -95,7 +95,7 @@ namespace MyFirstAddin
             }
 
 
-            //Main.ImportFile();
+            Main.ImportFile(@"C:\Users\01-WRO\Desktop\tmp\pliki\1276_OP_VP2542_20.dxf");
             
         }
 
