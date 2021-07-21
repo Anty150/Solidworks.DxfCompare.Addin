@@ -106,6 +106,7 @@ namespace MyFirstAddin
                         if (ReadFile(fileNames[duplicatesIndex[j]], fileNames[duplicatesIndex[k]]))
                         {
                             label1.Text += "\n Wykryto duplikat: \n" + fileNames[duplicatesIndex[j]] + " \n to duplikat pliku \n" + fileNames[duplicatesIndex[k]];
+                            duplicatesIndex.RemoveAt(k);
                         }
                     }
                 }
