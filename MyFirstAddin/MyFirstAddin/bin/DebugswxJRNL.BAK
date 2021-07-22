@@ -1,5 +1,5 @@
 ' ******************************************************************************
-' swxJRNL.swj - journal recorded on 07/16/21 by Anty
+' swxJRNL.swj - journal recorded on 07/22/21 by Anty
 ' *****************************************************************************
 Dim swApp As Object
 
@@ -11,11 +11,3 @@ Sub main()
 
 Set swApp = Application.SldWorks
 
-' MSGBOX
-' Hello!
-
-' MSGBOX
-' Goodbye!
-
-swApp.ExitApp
-End Sub

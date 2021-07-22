@@ -22,3 +22,11 @@ C:\Users\01-WRO\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAdd
 C:\Users\01-WRO\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.CoreCompileInputs.cache
 C:\Users\01-WRO\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.dll
 C:\Users\01-WRO\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.pdb
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.dll
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\bin\Debug\MyFirstAddin.pdb
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csprojAssemblyReference.cache
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.TaskpaneHostUI.resources
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.GenerateResource.cache
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.csproj.CoreCompileInputs.cache
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.dll
+C:\Users\igor2\Source\Repos\Solidworks.DxfCompare.Addin\MyFirstAddin\MyFirstAddin\obj\Debug\MyFirstAddin.pdb
